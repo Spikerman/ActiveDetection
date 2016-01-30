@@ -1,0 +1,8 @@
+{
+    "cordova-plugin-device-motion": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Spike\\Desktop\\cordova-plugin-device-motion"
+        }
+    }
+}
