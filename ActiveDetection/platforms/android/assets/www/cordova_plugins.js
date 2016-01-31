@@ -13,12 +13,20 @@ module.exports = [
         "clobbers": [
             "navigator.accelerometer"
         ]
+    },
+    {
+        "file": "plugins/cordova-ubilib/www/UbilibPlugin.js",
+        "id": "cordova-ubilib.UbilibPlugin",
+        "clobbers": [
+            "UbilibPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-device-motion": "1.2.0"
+    "cordova-plugin-device-motion": "1.2.0",
+    "cordova-ubilib": "0.0.1"
 }
 // BOTTOM OF METADATA
 });

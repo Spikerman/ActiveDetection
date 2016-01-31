@@ -91,4 +91,5 @@
     <splash src="res/screens/wp8/SplashScreenImage.jpg" width="480" height="800" />
   </platform>
   <vs:plugin name="cordova-plugin-device-motion" version="1.2.0" src="C:\Users\Spike\Desktop\cordova-plugin-device-motion" />
+  <vs:plugin name="cordova-ubilib" version="0.0.1" src="C:\Users\Spike\Desktop\cordova-ubilib" />
 </widget>

@@ -4,6 +4,9 @@
     <feature name="Accelerometer">
         <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
     </feature>
+    <feature name="UbilibPlugin">
+        <param name="android-package" value="com.ydcun.ivita.util.UbilibPlugin" />
+    </feature>
     <icon density="ldpi" src="res/icons/android/icon-36-ldpi.png" />
     <icon density="mdpi" src="res/icons/android/icon-48-mdpi.png" />
     <icon density="hdpi" src="res/icons/android/icon-72-hdpi.png" />
@@ -26,4 +29,5 @@
     <preference name="windows-target-version" value="8.1" />
     <preference name="windows-phone-target-version" value="8.1" />
     <vs:plugin name="cordova-plugin-device-motion" src="C:\Users\Spike\Desktop\cordova-plugin-device-motion" version="1.2.0" />
+    <vs:plugin name="cordova-ubilib" src="C:\Users\Spike\Desktop\cordova-ubilib" version="0.0.1" />
 </widget>

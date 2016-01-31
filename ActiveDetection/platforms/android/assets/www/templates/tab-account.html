@@ -1,21 +1,25 @@
 <ion-view view-title="Account">
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-        <button ng-click="getAcc()" class="button-possive">
-            Test
-        </button>
-       
-    </ion-list>
-   
-    <p>X={{data.x}}</p>
-      <br />
-    <p>Y={{data.y}}</p>
-      <br/>
-    <p>Z={{data.z}}</p>
-
-
+      <div class="list">
+          <div class="item item-divider">
+             Accelerate
+          </div>
+          <a class="item" href="#">
+              X={{data.acc.x}}
+          </a>
+          <a class="item" href="#">
+              Y ={{data.acc.y}}
+          </a>
+          <a class="item" href="#">
+              Z ={{data.acc.z}}
+          </a>
+  
+          <div class="item item-divider">
+              State
+          </div>
+          
+          <a class="item" href="#">{{data.paramsTest.min}}</a>
+          <a class="item" href="#">{{data.dataStatus}}</a>
+      </div>
   </ion-content>
 </ion-view>
