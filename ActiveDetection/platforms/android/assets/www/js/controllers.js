@@ -9,32 +9,43 @@ angular.module('starter.controllers', ["ngCordova"])
     }
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+
+.controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
     $scope.chat = Chats.get($stateParams.chatId);
 })
 
 .controller('AccountCtrl', function($scope,$cordovaDeviceMotion,$http) {
     $scope.settings = {
-        enableFriends: true
+        enableFriends: false
     };
 
 
 
     var accArray = [];
 
-    //$scope.onSwitchChange = function () {
-    //    $scope.isOn ? stop() : start();
-    //    $scopr.isOn =!$scopr.isOn;
-    //}
-
-    //function start() {
-    //    if (!watch) {
-           
-    //    }
-    //}
-
    
+    var watch=null;
 
+    $scope.change=function(){
+        if ($scope.settings.enableFriends) {
+            $scope.testState = "Start Test";
+            if (watch == null) {
+                watch = $cordovaDeviceMotion.watchAcceleration(options);
+                watch.then(null, fail, getAccArray);
+
+            }
+        }
+        else {
+            $scope.testState = "Stop Test";
+            if (watch != null) {
+                watch.clearWatch();
+                $scope.data = {};
+                watch = null;
+
+            }
+        }
+    }
+    
     $scope.getAcc = function () {
       
   
@@ -93,7 +104,6 @@ angular.module('starter.controllers', ["ngCordova"])
                     $scope.data.paramsTest = params;
                     accArray.length = 0;
                     accArray = [];
-                   // alert(accArray.length);
                     $http({
                         method: 'POST',
                         url: "http://ivita.xdua.org/ivita/compute/ActivityRecognizer",
@@ -110,7 +120,6 @@ angular.module('starter.controllers', ["ngCordova"])
                 }
 
                 function onSuccess(res) {
-                   //alert(JSON.stringify(res.data));
                     $scope.data.dataStatus = JSON.stringify(res.data);
                 }
                 function recErr(reason) {
@@ -119,8 +128,7 @@ angular.module('starter.controllers', ["ngCordova"])
             }
         }
 
-        var watch;
-        watch = $cordovaDeviceMotion.watchAcceleration(options).then(null, fail, getAccArray);
+        
         
 
 

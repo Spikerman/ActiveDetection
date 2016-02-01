@@ -1,22 +1,27 @@
 <ion-view view-title="Account">
   <ion-content>
+      <ion-list>
+          <ion-toggle ng-model="settings.enableFriends" ng-change="change()">
+              {{testState}}
+          </ion-toggle>
+      </ion-list>
       <div class="list">
           <div class="item item-divider">
              Accelerate
           </div>
           <a class="item" href="#">
-              X={{data.acc.x}}
+              X = {{data.acc.x}}
           </a>
           <a class="item" href="#">
-              Y ={{data.acc.y}}
+              Y = {{data.acc.y}}
           </a>
           <a class="item" href="#">
-              Z ={{data.acc.z}}
+              Z = {{data.acc.z}}
           </a>
   
           <div class="item item-divider">
               State
-          </div>
+         </div>
           
           <a class="item" href="#">{{data.paramsTest.min}}</a>
           <a class="item" href="#">{{data.dataStatus}}</a>
