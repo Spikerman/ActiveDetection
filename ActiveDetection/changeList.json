@@ -29,6 +29,7 @@
     "res\\screens\\ios\\screen-iphone-portrait-2x.png",
     "plugins\\cordova-plugin-device-motion\\www\\accelerometer.js",
     "res\\icons\\windows\\Square71x71Logo.scale-240.png",
+    "www\\templates\\information.html",
     "merges\\android\\scripts\\platformOverrides.js",
     "plugins\\cordova-plugin-device-motion\\doc\\ja\\index.md",
     "plugins\\cordova-plugin-device-motion\\src\\android\\AccelListener.java",
@@ -129,9 +130,14 @@
     "res\\screens\\android\\screen-mdpi-portrait.png"
   ],
   "deletedFilesIos": [],
-  "addedPluginsIos": [],
+  "addedPluginsIos": [
+    "cordova-plugin-device-motion@1.2.0",
+    "cordova-ubilib@0.0.1"
+  ],
   "deletedPluginsIos": [],
-  "changedFiles": [],
+  "changedFiles": [
+    "www\\templates\\tab-account.html"
+  ],
   "deletedFiles": [],
   "addedPlugins": [],
   "deletedPlugins": []

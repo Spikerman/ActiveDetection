@@ -1,30 +1,81 @@
 <ion-view view-title="Account">
+  <ion-pane>
+     
   <ion-content>
-      <ion-list>
+      
           <ion-toggle ng-model="settings.enableFriends" ng-change="change()">
-              {{testState}}
+              Test {{testState}}
           </ion-toggle>
-      </ion-list>
+ 
+      
+  <!--<div class="item range">
+    <i class="icon ion-ios-speedometer-outline"></i>
+        <input type="range" name="count">
+    <i class="icon ion-ios-speedometer"></i>
+  </div>-->
+    
+      <div class="list">
+          <div class="item item-divider">
+              User Choose
+          </div>
+      <label class="item item-input item-select">
+          <div class="input-label">
+              User
+          </div>
+          <select ng-options="n as n for n in ns" ng-model="input.name"></select>
+      </label>
+      </div>
+
+      <div class="list">
+          <div class="item item-divider">
+              Url Address
+          </div>
+          <label class="item item-input ">
+             
+              <input type="text" ng-model="input.url" />
+          </label>
+      </div>
+      
       <div class="list">
           <div class="item item-divider">
              Accelerate
           </div>
           <a class="item" href="#">
-              X = {{data.acc.x}}
+              X :  {{data.acc.x}}
           </a>
           <a class="item" href="#">
-              Y = {{data.acc.y}}
+              Y :  {{data.acc.y}}
           </a>
           <a class="item" href="#">
-              Z = {{data.acc.z}}
+              Z :  {{data.acc.z}}
           </a>
   
+          <!--<a class="item item-icon-left " href="#">
+    <i class="icon ion-android-contact"></i>
+    ACT: {{act}}
+    
+  </a>
+           <a class="item item-icon-left " href="#">
+    <i class="icon ion-android-contract"></i>
+    POSITION: {{position}}
+   
+  </a>
+           <a class="item item-icon-left " href="#">
+    <i class="icon ion-help-buoy"></i>
+    STATE: {{status}}
+   
+  </a>-->
+      </div>
+      <div class="list">
           <div class="item item-divider">
               State
-         </div>
-          
-          <a class="item" href="#">{{data.paramsTest.min}}</a>
-          <a class="item" href="#">{{data.dataStatus}}</a>
+          </div>
+          <a class="item" href="#" ng-repeat="result in resultArray">
+              {{result.content}}
+          </a>
       </div>
+
+
+
   </ion-content>
 </ion-view>

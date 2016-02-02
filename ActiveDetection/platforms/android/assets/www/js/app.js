@@ -21,7 +21,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+    $httpProvider.defaults.headers.common = {};
+    $httpProvider.defaults.headers.post = {};
+    $httpProvider.defaults.headers.put = {};
+    $httpProvider.defaults.headers.patch = {};
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -76,6 +80,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       
       }
     }
+  })
+
+  .state('tab.information', {
+      url: '/information',
+      views: {
+          'tab-information': {
+              templateUrl: 'templates/information.html',
+              controller: 'InfoCtrl'
+      
+          }
+      }
   });
 
   // if none of the above states are matched, use this as the fallback

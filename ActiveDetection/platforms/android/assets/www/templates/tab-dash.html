@@ -1,28 +1,30 @@
-<ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
+
+
+<ion-view view-title="Chatting">
+
+    <ion-content>
+
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">name</span>
+                <input type="text" placeholder="Name" ng-model="chatting.name">
+            </label>
+            <label class="item item-input item-floating-label" >
+                <span class="input-label">said</span>
+                <input type="text" placeholder="Said" ng-model="chatting.message">
+            </label>
         </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
+
+        <button class="button button-full button-positive" ng-click="onBtnClick()">
+            POST
+        </button>
+
+
+
+        <div class="card">
+            <div class="item item-text-wrap" ng-repeat="answer in answers">
+                {{answer.content}}
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
-  </ion-content>
+    </ion-content>
 </ion-view>
